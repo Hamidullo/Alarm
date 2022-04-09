@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Panda Alarm</string>
+    <string name="shake_the">Panda</string>
+    <string name="alarm">alarm clock</string>
+    <string name="clock">clock</string>
+    <string name="not_alarms">Нет будильников</string>
+    <string name="write_review">Напишите название</string>
+    <string name="time">12:48</string>
+    <string name="off_metod_alarm">Выкл Будильника</string>
+    <string name="heave">Трудность</string>
+    <string name="easy">Низ</string>
+    <string name="norm">Ср</string>
+    <string name="heav">Выс</string>
+    <string name="repeat">Повтор</string>
+    <string name="option">Опции</string>
+    <string name="melodi">Мелодия сигнала</string>
+    <string name="rington">Рингтон</string>
+
+</resources>

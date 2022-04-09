@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shame.alarm">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:forceDarkAllowed="false"
+        android:icon="@drawable/icons8_alarm"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/icons8_alarm"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Alarm"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activitys.QRCodeActivity" android:showOnLockScreen="true"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.MathActivity" android:showOnLockScreen="true"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.ShakeActivity" android:showOnLockScreen="true"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.ListAlarmActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.RingingActivity" android:showOnLockScreen="true"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.WeatherActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.QRFileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.SetAlarmActivity" android:parentActivityName=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.StartActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".alarm.AlarmBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.AlarmService"
+            android:exported="true" />
+        <service
+            android:name=".service.RescheduleAlarmsService"
+            android:exported="true" />
+    </application>
+
+</manifest>

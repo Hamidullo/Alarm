@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="12dp"
+    android:layout_margin="6dp"
+    android:background="@drawable/back_check"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/editTextP"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="Вы хотите удалить будильник ?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginTop="6dp"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_weight="1"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="6dp"
+            android:textSize="16sp"
+            android:text="Нет"
+            android:textStyle="bold"
+            android:backgroundTint="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_weight="1"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="6dp"
+            android:textSize="16sp"
+            android:text="Да"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:backgroundTint="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66000000"
+    tools:context=".activitys.WeatherActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainContainer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/back_check"
+        app:layout_constraintBottom_toTopOf="@id/adConteyner"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/cityWeather"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.02"
+            android:textStyle="bold"
+            android:text="Москва"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/mainIconWeather"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintHorizontal_bias="0.05"
+            android:src="@drawable/image16"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+
+        <TextView
+            android:id="@+id/tempWeather"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintHorizontal_bias="0.25"
+            android:text="-2°"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/temMaxMinWeather"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.55"
+            app:layout_constraintHorizontal_bias="0.85"
+            android:textColor="@color/white"
+            android:text="-2°C / -6°C"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.82"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight="1"
+                android:src="@drawable/image13"
+                android:layout_margin="3dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:id="@+id/humidityWeather"
+                android:layout_weight="1"
+                android:text="66%"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_weight="1"
+                android:src="@drawable/image14"
+                android:layout_margin="3dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:id="@+id/speedWeather"
+                android:layout_weight="1"
+                android:text="24.3 km/h"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_weight="1"
+                android:src="@drawable/image14"
+                android:layout_margin="3dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:id="@+id/descriptionWeather"
+                android:layout_weight="1"
+                android:text="western"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/adConteyner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="4dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/adConteyner"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"
+        android:background="@drawable/back_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_margin="8dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:layout_weight="1"
+                   android:orientation="vertical"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:background="@drawable/back_check"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:id="@+id/dateWeather"
+                       android:text="2021-12-11"
+                       android:textColor="@color/white"
+                       android:textSize="18sp"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_margin="3dp"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+
+                   <TextView
+                       android:id="@+id/itemTempMinMax"
+                       android:text="-2°C/-6°C"
+                       android:textColor="@color/white"
+                       android:textSize="14sp"
+                       android:layout_margin="3dp"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+
+                   <ImageView
+                       android:id="@+id/iconWeatherItem"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_margin="3dp"
+                       android:src="@drawable/image16"
+                       android:layout_width="50dp"
+                       android:layout_height="40dp"/>
+
+               </LinearLayout>
+
+
+               <LinearLayout
+                   android:layout_weight="1"
+                   android:orientation="vertical"
+                   android:layout_margin="12dp"
+                   android:background="@drawable/back_check"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:id="@+id/dateWeather1"
+                       android:text="2021-12-11"
+                       android:textColor="@color/white"
+                       android:textSize="18sp"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_margin="3dp"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+
+                   <TextView
+                       android:id="@+id/itemTempMinMax1"
+                       android:text="-2°C/-6°C"
+                       android:textColor="@color/white"
+                       android:textSize="14sp"
+                       android:layout_margin="3dp"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+
+                   <ImageView
+                       android:id="@+id/iconWeatherItem1"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_margin="3dp"
+                       android:src="@drawable/image16"
+                       android:layout_width="50dp"
+                       android:layout_height="40dp"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_weight="1"
+                   android:orientation="vertical"
+                   android:layout_marginTop="12dp"
+                   android:layout_marginBottom="12dp"
+                   android:layout_marginStart="12dp"
+                   android:layout_marginEnd="16dp"
+                   android:background="@drawable/back_check"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:id="@+id/dateWeather2"
+                       android:text="2021-12-11"
+                       android:textColor="@color/white"
+                       android:textSize="18sp"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_margin="3dp"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+
+                   <TextView
+                       android:id="@+id/itemTempMinMax2"
+                       android:text="-2°C/-6°C"
+                       android:textColor="@color/white"
+                       android:textSize="14sp"
+                       android:layout_margin="3dp"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+
+                   <ImageView
+                       android:id="@+id/iconWeatherItem2"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_margin="3dp"
+                       android:src="@drawable/image16"
+                       android:layout_width="50dp"
+                       android:layout_height="40dp"/>
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:orientation="horizontal"
+               android:weightSum="5"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <View
+                   android:layout_weight="1.5"
+                   android:layout_width="0dp"
+                   android:layout_height="4dp"/>
+
+               <LinearLayout
+                   android:layout_weight="1"
+                   android:orientation="vertical"
+                   android:layout_margin="12dp"
+                   android:background="@drawable/back_check"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:id="@+id/dateWeather3"
+                       android:text="2021-12-11"
+                       android:textColor="@color/white"
+                       android:textSize="18sp"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_margin="3dp"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+
+                   <TextView
+                       android:id="@+id/itemTempMinMax3"
+                       android:text="-2°C/-6°C"
+                       android:textColor="@color/white"
+                       android:textSize="14sp"
+                       android:layout_margin="3dp"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+
+                   <ImageView
+                       android:id="@+id/iconWeatherItem3"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_margin="3dp"
+                       android:src="@drawable/image16"
+                       android:layout_width="50dp"
+                       android:layout_height="40dp"/>
+
+               </LinearLayout>
+
+
+               <LinearLayout
+                   android:layout_weight="1"
+                   android:orientation="vertical"
+                   android:layout_margin="12dp"
+                   android:background="@drawable/back_check"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:id="@+id/dateWeather4"
+                       android:text="2021-12-11"
+                       android:textColor="@color/white"
+                       android:textSize="18sp"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_margin="3dp"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+
+                   <TextView
+                       android:id="@+id/itemTempMinMax4"
+                       android:text="-2°C/-6°C"
+                       android:textColor="@color/white"
+                       android:textSize="14sp"
+                       android:layout_margin="3dp"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+
+                   <ImageView
+                       android:id="@+id/iconWeatherItem4"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_margin="3dp"
+                       android:src="@drawable/image16"
+                       android:layout_width="50dp"
+                       android:layout_height="40dp"/>
+
+               </LinearLayout>
+
+               <View
+                   android:layout_weight="1.5"
+                   android:layout_width="0dp"
+                   android:layout_height="4dp"/>
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Panda Alarm Clock !"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textAllCaps="true"
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
